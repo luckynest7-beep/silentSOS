@@ -1,63 +1,188 @@
-# SilentSOS 🔒📶 (Disguised Safety Alert App)
+# 🔒 SilentSOS — When Calling for Help Isn't Safe
 
-SilentSOS is a highly polished, production-ready native Android personal safety application written in **Kotlin** and powered by **Jetpack Compose**. It is disguised as a fully-functioning standard calculator, enabling discreet emergency alerting and evidence archiving under pressure.
+## 🚨 Problem Statement
 
----
+In many emergencies such as stalking, harassment, domestic violence, kidnapping threats, or unsafe encounters, victims often cannot openly call or text for help without escalating the danger.
 
-## 📱 User Journeys & App Behavior
+Most safety applications require visible interaction, making them ineffective when discretion is critical.
 
-1. **Fully-Functional Disguise**: On launch, the app initiates a realistic, sleek dark-slate mathematical calculator. It performs standard operations (`+`, `-`, `×`, `÷`, `%`, decimals, parenthesis, and clear/delete keys). No emergency indicators, hints, or debug panels are visible nearby.
-2. **Settings Lock / Configuration**: Type **`1397`** and click **`=`** on the calculator display. The app silently navigates to the **SilentSOS Config Dashboard**.
-3. **Triggering Silent SOS**: Type **`2026`** (default, customizable in configurations) and click **`=`** on the calculator display. The app generates a 150ms tactile vibration confirmation and starts the background distress sequences.
-4. **Safety Stop Verification**: While an SOS incident is active, typing the secure Safe Stop PIN (default **`0000`**, customizable) and clicking **`=`** deactivates the emergency triggers, stops further micro recording, sends a secure safety update broadcast, and displays a friendly feedback.
+There is a need for a safety solution that allows users to request help silently, without revealing their intentions to an attacker.
 
 ---
 
-## 🛠️ Deep Feature Set & Orchestration
+## 💡 Our Solution
 
-The application utilizes native Android services coordinated under a Clean Architecture framework:
+**SilentSOS** is a discreet emergency assistance application disguised as a fully functional calculator.
 
-- **GPS Maps Dynamic Tracking link**: Resolves device coordinates through `FusedLocationProviderClient` fallbacks to standard system base antennas (`LocationManager`). It forms a click-to-nav Google Maps tracking link.
-- **Microphone Ambient Recording**: Records a high-fidelity **30-second silent audio clip** locally through standard `MediaRecorder` using `.mp4/AAC` encoder blocks.
-- **Front Camera Secret Selfie**: Triggers front camera snapshot via `CameraX` minimization-latency pipeline, capturing the perimeter context seamlessly.
-- **Telemetry Battery & Time capture**: Integrates real-time device battery management status (`BatteryManager`) and captures highly precise local timestamps.
-- **SMS Responder Broadcasts**: Programmatically divides and dispatches distress emergency alerts directly to configured contacts through modern `SmsManager` ports.
-- **Incident Data Persistence (Room)**: Uses a secure, local Room SQLite Database (`AppDatabase`) to persist custom emergency contacts, key-value lock settings, and comprehensive media evidence files (saving full selfie files and interactive audio playbacks directly in the internal storage directory).
+To anyone looking at the screen, it behaves exactly like a normal calculator. However, a hidden trigger instantly activates emergency protocols in the background.
 
----
+Within seconds, SilentSOS:
 
-## 📂 Source Code Clean Architecture
+* Sends emergency SMS alerts
+* Shares live location
+* Captures evidence
+* Logs critical incident details
+* Stores information securely for later access
 
-We mapped a pristine, modular structure under the main package root:
-
-- **`com.example.MainActivity.kt`**: Coordinates navigation state and edge-to-edge drawing through lightweight Jetpack Compose crossfade views.
-- **`com.example.data.entity`**:
-  - `Contact.kt`: Represents localized emergency contact tables.
-  - `EmergencyEvent.kt`: Comprehensive database index storing battery telemetry, location coords, date-time labels, and captured local file paths.
-  - `Setting.kt`: Core database persistence model for passcodes and toggle configurations.
-- **`com.example.services`**:
-  - `SosService.kt`: Central alert coordinator that spins location, battery, and triggers quick SMS. It handles asynchronous camera snapshots and 30-second recording clips in parallel to prevent UI locking.
-  - `ContactService.kt`: Direct native implementation for sending multiple part SMS to contacts.
-  - `LocationService.kt`: Standard coordinates tracking client.
-  - `CameraService.kt`: Compact CameraX wrapper utilizing the front camera.
-  - `AudioService.kt`: Core MediaRecorder wrapper managing silent audio recordings.
-  - `BatteryService.kt`: Core BatteryManager telemetry monitor.
-- **`com.example.ui.screens`**:
-  - `CalculatorScreen.kt`: Exquisite slate calculator keypad centering display values and evaluating math strings safely.
-  - `SettingsScreen.kt`: Hidden operations dashboard. Includes instant permissions trackers, contacts database editors, customizable toggles, codes configuration lists, and a historic incident browser with working camera images and working audio playback nodes.
-- **`com.example.ui.theme`**: Custom, eye-safe, premium Material 3 dynamic color scheme configs.
+All without exposing the victim's actions.
 
 ---
 
-## 🧑‍💻 How to Present/Demo in the Hackathon
+## ✨ Key Features
 
-1. Launch the application in the Streaming Emulator.
-2. Tap around the calculator. Verify that arbitrary math works flawlessly (e.g. `12 + 48 = 60`).
-3. Type **`1397`** and click **`=`** to slide into the Hidden Dashboard.
-4. Set up an emergency responder contact name and a number.
-5. Review the Permission switches. Click "**Grant Safety Permissions**" to request immediate phone permission setups.
-6. Click the back arrow to re-enter Calculator Disguise.
-7. Type **`2026`** and click **`=`**. You'll feel a tiny vibration confirmation while the background captures location, battery percentage, does a 30s ambient audio recorder, and captures a front camera selfie.
-8. Re-enter Settings with **`1397`** + **`=`**.
-9. Scroll to "**Evidence Archive**". Click on the logged incident report.
-10. Marvel at the **captured front camera selfie photo**, see the **accurate Google Maps link**, and **click play to listen to your recorded audio clip** in real-time! 🏆
+### 🧮 Calculator Disguise
+
+A realistic calculator interface that performs standard mathematical operations while concealing emergency functionality.
+
+### 📍 Live Location Sharing
+
+Automatically captures GPS coordinates and generates a Google Maps tracking link.
+
+### 📩 Emergency SMS Alerts
+
+Instantly sends distress messages to pre-configured trusted contacts.
+
+### 🎙️ Ambient Audio Recording
+
+Captures a 30-second audio recording that may provide valuable evidence.
+
+### 🤳 Secret Front Camera Capture
+
+Takes a front-camera image to document the immediate situation.
+
+### 🔋 Device Telemetry Collection
+
+Stores battery percentage, timestamps, and location data for incident tracking.
+
+### 🗄️ Evidence Archive
+
+All emergency events are securely stored for later review.
+
+### 🛑 Safe Stop Verification
+
+A secure PIN can be used to deactivate an active alert and notify contacts that the user is safe.
+
+---
+
+## 🚀 Why SilentSOS is Different
+
+Most emergency apps assume users can openly interact with their phones.
+
+SilentSOS is designed for situations where that assumption fails.
+
+### Our Innovation
+
+✅ Hidden inside a common everyday application
+
+✅ Works discreetly under pressure
+
+✅ Generates evidence automatically
+
+✅ Functions even without internet access through SMS
+
+✅ Requires minimal user interaction during emergencies
+
+---
+
+## 🏗️ Tech Stack
+
+### Mobile Development
+
+* Kotlin
+* Jetpack Compose
+* Material 3
+
+### Android Services
+
+* CameraX
+* MediaRecorder
+* SmsManager
+* BatteryManager
+* FusedLocationProviderClient
+
+### Data Storage
+
+* Room Database
+* SQLite
+
+### Architecture
+
+* MVVM
+* Clean Architecture
+
+---
+
+## 🔄 How It Works
+
+1. User opens SilentSOS.
+2. App appears as a normal calculator.
+3. User enters the secret SOS code.
+4. SilentSOS activates in the background.
+5. Location, image, audio, and device telemetry are collected.
+6. Emergency SMS alerts are sent.
+7. Incident data is securely archived.
+
+---
+
+## 🎯 Real-World Impact
+
+SilentSOS can assist individuals facing:
+
+* Stalking
+* Harassment
+* Domestic violence
+* Kidnapping threats
+* Unsafe travel situations
+* Medical emergencies where speaking is difficult
+
+By enabling discreet emergency communication, SilentSOS helps users seek assistance without drawing attention.
+
+---
+
+## 🔮 Future Scope
+
+### AI Threat Detection
+
+Analyze audio and contextual signals to estimate threat severity.
+
+### Smart Risk Scoring
+
+Generate real-time danger levels based on collected evidence.
+
+### Offline Mesh Networking
+
+Enable emergency alerts even when cellular networks are unavailable.
+
+### Voice Distress Recognition
+
+Detect panic keywords and trigger alerts automatically.
+
+### Emergency Services Integration
+
+Forward alerts directly to authorized response systems.
+
+---
+
+## 🎥 Demo Flow
+
+1. Launch the app.
+2. Use the calculator normally.
+3. Enter the hidden settings code.
+4. Configure emergency contacts.
+5. Return to calculator mode.
+6. Enter the SOS trigger code.
+7. Observe:
+
+   * SMS alerts sent
+   * Location captured
+   * Audio recorded
+   * Front camera image stored
+8. View evidence in the archive dashboard.
+
+---
+
+## 👥 Team
+
+Built during a hackathon with the vision of making personal safety accessible, discreet, and reliable.
+
+**SilentSOS — Because sometimes the safest way to ask for help is without anyone noticing.**
