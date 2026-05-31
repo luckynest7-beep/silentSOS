@@ -1,5 +1,5 @@
 # 🔒 SilentSOS — When Calling for Help Isn't Safe
-
+#(hidden configuration code is given in Demo flow)
 ## 🚨 Problem Statement
 
 In many emergencies such as stalking, harassment, domestic violence, kidnapping threats, or unsafe encounters, victims often cannot openly call or text for help without escalating the danger.
@@ -167,7 +167,7 @@ Forward alerts directly to authorized response systems.
 
 1. Launch the app.
 2. Use the calculator normally.
-3. Enter the hidden settings code.
+3. Enter the hidden settings code(1397#).
 4. Configure emergency contacts.
 5. Return to calculator mode.
 6. Enter the SOS trigger code.
