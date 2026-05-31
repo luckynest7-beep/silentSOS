@@ -1,0 +1,6 @@
+{
+  "name": "Calculator",
+  "description": "A discreet personal safety app disguised as a standard calculator.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

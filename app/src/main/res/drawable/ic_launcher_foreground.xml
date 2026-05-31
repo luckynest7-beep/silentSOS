@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    
+    <!-- Calculator Base Shell in dark carbon matte -->
+    <path
+        android:fillColor="#2D2D34"
+        android:pathData="M 30,22 Q 26,22 26,26 L 26,82 Q 26,86 30,86 L 78,86 Q 82,86 82,82 L 82,26 Q 82,22 78,22 Z" />
+        
+    <!-- Metallic/Slate trim accent around the body -->
+    <path
+        android:fillColor="#3D3D48"
+        android:pathData="M 32,24 Q 30,24 30,26 L 30,80 Q 30,82 32,82 L 76,82 Q 78,82 78,80 L 78,26 Q 78,24 76,24 Z" />
+
+    <!-- LCD Digital Display Area -->
+    <path
+        android:fillColor="#6B7C70"
+        android:pathData="M 34,28 Q 33,28 33,29 L 33,41 Q 33,42 34,42 L 74,42 Q 75,42 75,41 L 75,29 Q 75,28 74,28 Z" />
+
+    <!-- Display active digital segments represent "0" -->
+    <path
+        android:fillColor="#1B221E"
+        android:pathData="M 68,31 L 70,31 L 70,39 L 68,39 Z" />
+    <path
+        android:fillColor="#1B221E"
+        android:pathData="M 64,31 L 68,31 L 68,32 L 64,32 Z"/>
+    <path
+        android:fillColor="#1B221E"
+        android:pathData="M 64,38 L 68,38 L 68,39 L 64,39 Z"/>
+    <path
+        android:fillColor="#1B221E"
+        android:pathData="M 64,31 L 65,31 L 65,39 L 64,39 Z" />
+
+    <!-- Button Row 1 (AC, DEL, /, *) -->
+    <path android:fillColor="#D97706" android:pathData="M 34,46 H 42 V 52 H 34 Z" />
+    <path android:fillColor="#E5E7EB" android:pathData="M 45,46 H 53 V 52 H 45 Z" />
+    <path android:fillColor="#4B5563" android:pathData="M 56,46 H 64 V 52 H 56 Z" />
+    <path android:fillColor="#4B5563" android:pathData="M 67,46 H 75 V 52 H 67 Z" />
+
+    <!-- Button Row 2 (7, 8, 9, -) -->
+    <path android:fillColor="#1F2937" android:pathData="M 34,55 H 42 V 61 H 34 Z" />
+    <path android:fillColor="#1F2937" android:pathData="M 45,55 H 53 V 61 H 45 Z" />
+    <path android:fillColor="#1F2937" android:pathData="M 56,55 H 64 V 61 H 56 Z" />
+    <path android:fillColor="#4B5563" android:pathData="M 67,55 H 75 V 61 H 67 Z" />
+
+    <!-- Button Row 3 (4, 5, 6, +) -->
+    <path android:fillColor="#1F2937" android:pathData="M 34,64 H 42 V 70 H 34 Z" />
+    <path android:fillColor="#1F2937" android:pathData="M 45,64 H 53 V 70 H 45 Z" />
+    <path android:fillColor="#1F2937" android:pathData="M 56,64 H 64 V 70 H 56 Z" />
+    <path android:fillColor="#4B5563" android:pathData="M 67,64 H 75 V 70 H 67 Z" />
+
+    <!-- Button Row 4 (1, 2, 3, =) -->
+    <path android:fillColor="#1F2937" android:pathData="M 34,73 H 42 V 79 H 34 Z" />
+    <path android:fillColor="#1F2937" android:pathData="M 45,73 H 53 V 79 H 45 Z" />
+    <path android:fillColor="#1F2937" android:pathData="M 56,73 H 64 V 79 H 56 Z" />
+    <path android:fillColor="#DC2626" android:pathData="M 67,73 H 75 V 79 H 67 Z" />
+
+</vector>
